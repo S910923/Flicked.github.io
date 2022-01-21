@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+<style>
+body {
+  background-color: black;
+  font-family: cursive;
+}
+
+.glow {
+  font-size: 80px;
+  color: #fff;
+  text-align: center;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
+</style>
+</head>
+<body>
+
+<h1 class="glow">EltraughStudy.co</h1>
+     
+</body>
+</html> 
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #4400ff;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<div class="topnav">
+  <a class="active" href="home.html"> HOME </a>
+  <a  href="BEGIN.html">NTSE</a>
+  <a href="CLASS-10.html">CLASS 10 </a>
+ <a href="Findword.html">What Does It Mean </a>
+  <a href="https://vmkt.s3-ap-southeast-1.amazonaws.com/app_youtube_sprints/Best+Time+table+for+JEE+MAIN+Prepartions++_+Clear+JEE+MAIN+in+first+attempt.pdf">syllabus for iit and jee </a>
+<a href="https://schools.studyrate.in/class-10th/ntse-foundation-series-pdf/">Notes for NTSE </a>
+<a href="onlin.html">Online</a>
+<a href="notes.html">Todays Task </a>
+<a href="Books.html">Books(10)</a>
+</div>
+
+<a id="codepen-link" href='https://www.codepen.io/seanfree' target='_blank'></a>
+<div id="clock">
+  <ul id="tick-marks"></ul>
+  <div class="second ticker"></div>
+  <div class="minute ticker"></div>
+  <div class="hour ticker"></div>
+  <div id="time-output"></div>
+</div>
+
+  <style>
+  Result Skip Results Iframe
+EDIT ON
+@import 'https://fonts.googleapis.com/css?family=Work+Sans:100';
+body{
+  background: radial-gradient(#569, #223);
+  height: 100vh;
+  overflow: hidden;
+  width: 100vw;
+}
+#codepen-link{
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  height: 40px;
+  width: 40px;
+  z-index: 10;
+  border-radius: 50%;
+  box-sizing: border-box;
+  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/544318/logo.jpg');
+  background-position: center center;
+  background-size: cover;
+  opacity: 0.5;
+  transition: all 0.25s;
+}
+#codepen-link:hover{
+    opacity: 0.8;
+    box-shadow: 0 0 6px rgba(225,235,255,0.8);
+}
+#clock{
+  border-radius: 50%;
+  height: 450px;
+  left: calc(50% - 225px);
+  position: relative;
+  top: calc(50% - 225px);
+  width: 450px;
+}
+#tick-marks{
+  height: 100%;
+  position: absolute;
+  transform: rotate(-90deg);
+  width: 100%;
+}
+.tick-mark{
+  border: 1px solid #335;
+  border-radius: 50%;
+  box-sizing: border-box;
+  height: 8px;
+  list-style: none;
+  position: absolute;
+  transition: all 300ms;
+  width: 8px;
+}
+.tick-mark:nth-of-type(5n + 1){
+  height: 14px;
+  width: 14px;
+}
+.ticker{
+  background: rgba(155, 175, 235, 0.7);
+  border: 1px solid #335;
+  border-radius: 50%;
+  box-sizing: border-box;
+  position: absolute;
+  transform-origin: center center;
+}
+.ticker:after{
+  border: 1px solid #335;
+  bottom: calc(50% + 8px);
+  content: "";
+  display: block;
+  height: 11px;
+  left: calc(50% - 6px);
+  position: relative;
+  transform: rotate(45deg);
+  width: 11px;
+}
+.ticker:before{
+  background: #abf;
+  border: 1px solid #335;
+  border-radius: 2px;
+  content: "";
+  display: block;
+  height: 50%;
+  left: calc(50% - 2px);
+  position: relative;
+  width: 3px;
+}
+.second.ticker{
+  box-shadow: inset 0 0 0.6em 0.1em #ccf;
+  height: 400px;
+  left: calc(50% - 200px);
+  top: calc(50% - 200px);
+  width: 400px;
+  transition: all 200ms cubic-bezier(1, -0.1, 0.35, 1.335);
+}
+.second.ticker:after{
+  background: #9cf;
+}
+.minute.ticker{
+  box-shadow: inset 0 0 0.7em 0.2em #ccf;
+  height: 340px;
+  left: calc(50% - 170px);
+  top: calc(50% - 170px);
+  width: 340px;
+  transition: all 600ms cubic-bezier(1, -0.1, 0.35, 1.335);
+}
+.minute.ticker:after{
+  background: #9fc;
+}
+.hour.ticker{
+  box-shadow: inset 0 0 0.8em 0.3em #ccf;
+  height: 280px;
+  left: calc(50% - 140px);
+  top: calc(50% - 140px);
+  width: 280px;
+  transition: all 1000ms cubic-bezier(1, -0.1, 0.35, 1.335);
+}
+.hour.ticker:after{
+  background: #c9f;
+}
+#time-output{
+  background-image: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.5) 25%,
+    rgba(0, 0, 0, 0.6) 50%,
+    rgba(0, 0, 0, 0.5) 75%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  color: #fff;
+  font-family: "Work Sans", sans-serif;
+  font-size: 3em;
+  margin: auto;
+  position: relative;
+  text-align: center;
+  top: calc(50% - 0.5em);
+  width: 380px;
+}
+</style>
+<script>
+
+
+(function(window,document,undefined){
+  function $(id) {
+    return document.getElementById(id);
+  }
+  
+  class Clock extends Date {
+    constructor(element) {
+      super(); //call parent Date class
+      var self = this; //only used for keeping setInterval in Clock namespace
+      this.element = element; //html clock element
+      this.now = new Date();
+      this.currentTime = {
+        s: this.getSeconds(),
+        m: this.getMinutes(),
+        h: this.formatHours(this.getHours()) //format current hour to 12-hour clock
+      };
+      this.timeOutput = $('time-output'); //Clock label
+      this.timeOutput.innerHTML = this.now.toLocaleTimeString();
+      this.build();
+      this.timer = setInterval(function() {
+        self.update();
+      }, 1000);
+    }
+  }
+  
+  Clock.prototype.formatHours = function formatHours(hours) {
+    var formatted = hours > 12 ? hours - 12 : hours; //if hour is greater than 12, subtract 12. Else keep the same.
+    return formatted;
+  };
+  
+  Clock.prototype.update = function update() {
+    this.now = new Date(); 
+    this.timeOutput.innerHTML = this.now.toLocaleTimeString();
+    this.tickSeconds();
+    if (this.minuteChanged) {
+      this.tickMinutes();
+    }
+    if (this.hourChanged) {
+      this.tickHours();
+    }
+  };
+  
+  Clock.prototype.build = function build() {
+    this.step = { //step rotation in degrees
+      s: 6, //seconds
+      m: 6, //minutes
+      h: 30 //hours
+    };
+    this.rotation = {
+      s: this.getSeconds() * this.step.s,
+      m: this.getMinutes() * this.step.m,
+      h: this.formatHours(this.getHours()) * this.step.h
+    };
+    this.ticker = { //html 'hand' elements
+      second: this.element.getElementsByClassName('second')[0],
+      minute: this.element.getElementsByClassName('minute')[0],
+      hour: this.element.getElementsByClassName('hour')[0]
+    };
+    this.tickColor = {
+      s: '#9cf', //blue
+      m: '#9fc', //green
+      h: '#c9f', //purple
+      n: 'transparent'
+    };
+    this.tickList = $('tick-marks'); //html ul element surrounding clock face
+    this.tickMarks = [];
+    this.ticker.second.style.transform = 'rotate(' + this.rotation.s + 'deg)'; //rotate to current time values
+    this.ticker.minute.style.transform = 'rotate(' + this.rotation.m + 'deg)';
+    this.ticker.hour.style.transform = 'rotate(' + this.rotation.h + 'deg)';
+    var diameter = this.element.offsetWidth,
+      radius = diameter * 0.5, //radius of circle for tick marks to be placed in
+      angle = 0,
+      step = (2 * Math.PI) / 60, //radians
+      tickMark, offset, x, y;
+    for (var i = 0; i < 60; i++) {
+      offset = i % 5 === 0 ? 7 : 4; //every 5th tick mark is offset to compensate for larger size
+      x = Math.round((radius * Math.cos(angle)) + radius - offset); //calculate cosine of current angle with radius of tickmarks circle
+      y = Math.round((radius * Math.sin(angle)) + radius - offset); //sine
+      angle += step; //increment angle by 6deg (2pi/60 radians)
+      tickMark = document.createElement('li'); //create and style tick mark
+      tickMark.id = 't' + (i + 1);
+      tickMark.className = 'tick-mark';
+      tickMark.style.left = x + 'px';
+      tickMark.style.top = y + 'px';
+      this.tickMarks.push(tickMark);
+      this.tickList.appendChild(tickMark);
+    }
+    this.highlight();
+  };
+  
+  Clock.prototype.tickSeconds = function tickSeconds() {
+    this.currentTime.s = this.now.getSeconds();
+    this.rotation.s += this.step.s;
+    this.ticker.second.style.transform = 'rotate(' + this.rotation.s + 'deg)';
+    if (this.now.getSeconds() === 0) {
+      this.minuteChanged = true;
+    }
+    this.highlight();
+  };
+  
+  Clock.prototype.tickMinutes = function tickMinutes() {
+    this.currentTime.m = this.now.getMinutes();
+    this.rotation.m += this.step.m;
+    this.ticker.minute.style.transform = 'rotate(' + this.rotation.m + 'deg)';
+    if (this.now.getMinutes() === 0) {
+      this.hourChanged = true;
+    }
+    this.highlight();
+    this.minuteChanged = false;
+  };
+  
+  Clock.prototype.tickHours = function tickHours() {
+    this.currentTime.h = this.formatHours(this.now.getHours());
+    this.rotation.h += this.step.h;
+    this.ticker.hour.style.transform = 'rotate(' + this.rotation.h + 'deg)';
+    this.highlight();
+    this.hourChanged = false;
+  };
+  
+  Clock.prototype.highlight = function highlight() {
+    var curS = this.currentTime.s, //variables for tickmarks indexes
+      preS = curS === 0 ? 59 : curS - 1;
+  
+    var curM = this.currentTime.m,
+      preM = curM === 0 ? 59 : curM - 1;
+  
+    var curH = this.currentTime.h * 5 == 60 ? 0 : this.currentTime.h * 5,
+      preH = curH === 0 ? 55 : curH - 5;
+  
+    this.tickMarks[curM].style.transitionDuration = this.tickMarks[preM].style.transitionDuration = '600ms';
+    this.tickMarks[curH].style.transitionDuration = this.tickMarks[preH].style.transitionDuration = '1000ms';
+  
+    this.tickMarks[preS].style.backgroundColor = this.tickColor.n;
+    this.tickMarks[curS].style.backgroundColor = this.tickColor.s;
+  
+    if (this.minuteChanged) {
+      this.tickMarks[preM].style.backgroundColor = this.tickColor.n;
+    }
+    this.tickMarks[curM].style.backgroundColor = this.tickColor.m;
+  
+    if (this.hourChanged) {
+      this.tickMarks[preH].style.backgroundColor = this.tickColor.n;
+    }
+    this.tickMarks[curH].style.backgroundColor = this.tickColor.h;
+  };
+  
+  window.onload = function(){
+    return new Clock($('clock'));
+  };
+}(window,document));
+</script>
+
+
+
+<head>
+  <script language="javascript"></script>
+</head>
+<form name="sci-calc">
+ <table class="calculator" cellspacing="0" cellpadding="1">
+   <tr>
+     <td colspan="5"><input id="display" name="display" value="0" size="28" maxlength="25"></td>
+   </tr>
+   <tr>
+     <td><input type="button" class="btnTop" name="btnTop" value="C" onclick="this.form.display.value=  0 "></td>
+     <td><input type="button" class="btnTop" name="btnTop" value="<--" onclick="deleteChar(this.form.display)"></td>
+     <td><input type="button" class="btnTop" name="btnTop" value="=" onclick="if(checkNum(this.form.display.value)) { compute(this.form) }"></td>
+     <td><input type="button" class="btnOpps" name="btnOpps" value="&#960;" onclick="addChar(this.form.display,'3.14159265359')"></td>
+     <td><input type="button" class="btnMath" name="btnMath" value="%" onclick=" percent(this.form.display)"></td>
+   </tr>
+   <tr>
+     <td><input type="button" class="btnNum" name="btnNum" value="7" onclick="addChar(this.form.display, '7')"></td>
+     <td><input type="button" class="btnNum" name="btnNum" value="8" onclick="addChar(this.form.display, '8')"></td>
+     <td><input type="button" class="btnNum" name="btnNum" value="9" onclick="addChar(this.form.display, '9')"></td>
+     <td><input type="button" class="btnOpps" name="btnOpps" value="x&#94;" onclick="if(checkNum(this.form.display.value)) { exp(this.form) }"></td>
+     <td><input type="button" class="btnMath" name="btnMath" value="/" onclick="addChar(this.form.display, '/')"></td>
+   <tr>
+     <td><input type="button" class="btnNum" name="btnNum" value="4" onclick="addChar(this.form.display, '4')"></td>
+     <td><input type="button" class="btnNum" name="btnNum" value="5" onclick="addChar(this.form.display, '5')"></td>
+     <td><input type="button" class="btnNum" name="btnNum" value="6" onclick="addChar(this.form.display, '6')"></td>
+     <td><input type="button" class="btnOpps" name="btnOpps" value="ln" onclick="if(checkNum(this.form.display.value)) { ln(this.form) }"></td>
+     <td><input type="button" class="btnMath" name="btnMath" value="*" onclick="addChar(this.form.display, '*')"></td>
+   </tr>
+   <tr>
+     <td><input type="button" class="btnNum" name="btnNum" value="1" onclick="addChar(this.form.display, '1')"></td>
+     <td><input type="button" class="btnNum" name="btnNum" value="2" onclick="addChar(this.form.display, '2')"></td>
+     <td><input type="button" class="btnNum" name="btnNum" value="3" onclick="addChar(this.form.display, '3')"></td>
+     <td><input type="button" class="btnOpps" name="btnOpps" value="&radic;" onclick="if(checkNum(this.form.display.value)) { sqrt(this.form) }"></td>
+     <td><input type="button" class="btnMath" name="btnMath" value="-" onclick="addChar(this.form.display, '-')"></td>
+   </tr>
+   <tr>
+     <td><input type="button" class="btnMath" name="btnMath" value="&#177" onclick="changeSign(this.form.display)"></td>
+     <td><input type="button" class="btnNum" name="btnNum" value="0" onclick="addChar(this.form.display, '0')"></td>
+     <td><input type="button" class="btnMath" name="btnMath" value="&#46;" onclick="addChar(this.form.display, '&#46;')"></td>
+     <td><input type="button" class="btnOpps" name="btnOpps" value="x&#50;" onclick="if(checkNum(this.form.display.value)) { square(this.form) }"></td>
+     <td><input type="button" class="btnMath" name="btnMath" value="+" onclick="addChar(this.form.display, '+')"></td>
+   </tr>
+   <tr>
+     <td><input type="button" class="btnMath" name="btnMath" value="(" onclick="addChar(this.form.display, '(')"></td>
+     <td><input type="button" class="btnMath" name="btnMath" value=")" onclick="addChar(this.form.display,')')"></td>
+     <td><input type="button" class="btnMath" name="btnMath" value="cos" onclick="if(checkNum(this.form.display.value)) { cos(this.form) }"></td>
+     <td><input type="button" class="btnMath" name="btnMath" value="sin" onclick="if(checkNum(this.form.display.value)) { sin(this.form) }"></td>
+     <td><input type="button" class="btnMath" name="btnMath" value="tan" onclick="if(checkNum(this.form.display.value)) { tan(this.form) }"></td>
+  </tr>
+ </tabel>
+</form>
+     
+    <style>
+
+
+* {
+  padding: 0;
+  margin: 5px;
+  text-align: center;
+}
+body {
+  background-color:black;
+}
+.calculator {
+  width: 350px;
+  height: 320px;
+  background-color: #c0c0c0;
+  box-shadow: 0px 0px 0px 10px #666;
+  border: 5px solid black;
+  border-radius: 10px;
+}
+#display {
+  width: 320px;
+  height: 40px;
+  text-align: right;
+  background-color: black;
+  border: 3px solid white;
+  font-size: 18px;
+  left: 2px;
+  top: 2px;
+  color: #7fff00;
+}
+.btnTop{
+  color: white;
+  background-color: #6f6f6f;
+  font-size: 14px;
+  margin: auto;
+  width: 50px;
+  height: 25px;
+}
+.btnNum {
+  color: white;
+  background-color: black;
+  font-size: 14px;
+  margin: auto;
+  width: 50px;
+  height: 25px;
+}
+.btnMath {
+  color: white;
+  background-color: #ff4561;
+  font-size: 14px;
+  margin: auto;
+  width: 50px;
+  height: 25px;
+}
+.btnOpps {
+  color: white;
+  background-color: #ff9933;
+  font-size: 14px;
+  margin: auto;
+  width: 50px;
+  height: 25px;
+}
+    </style> 
+    
+
+    <script>
+
+
+function addChar(input, character) {
+	if(input.value == null || input.value == "0")
+		input.value = character
+	else
+		input.value += character
+}
+
+function cos(form) {
+	form.display.value = Math.cos(form.display.value);
+}
+
+function sin(form) {
+	form.display.value = Math.sin(form.display.value);
+}
+
+function tan(form) {
+	form.display.value = Math.tan(form.display.value);
+}
+
+function sqrt(form) {
+	form.display.value = Math.sqrt(form.display.value);
+}
+
+function ln(form) {
+	form.display.value = Math.log(form.display.value);
+}
+
+function exp(form) {
+	form.display.value = Math.exp(form.display.value);
+}
+
+function deleteChar(input) {
+	input.value = input.value.substring(0, input.value.length - 1)
+}
+var val = 0.0;
+function percent(input) {
+  val = input.value;
+  input.value = input.value + "%";
+}
+
+function changeSign(input) {
+	if(input.value.substring(0, 1) == "-")
+		input.value = input.value.substring(1, input.value.length)
+	else
+		input.value = "-" + input.value
+}
+
+function compute(form) {
+  //if (val !== 0.0) {
+   // var percent = form.display.value;  
+   // percent = pcent.substring(percent.indexOf("%")+1);
+   // form.display.value = parseFloat(percent)/100 * val;
+    //val = 0.0;
+ // } else 
+    form.display.value = eval(form.display.value);
+  }
+
+
+function square(form) {
+	form.display.value = eval(form.display.value) * eval(form.display.value)
+}
+
+function checkNum(str) {
+	for (var i = 0; i < str.length; i++) {
+		var ch = str.charAt(i);
+		if (ch < "0" || ch > "9") {
+			if (ch != "/" && ch != "*" && ch != "+" && ch != "-" && ch != "."
+				&& ch != "(" && ch!= ")" && ch != "%") {
+				alert("invalid entry!")
+				return false
+				}
+			}
+		}
+		return true
+}
+
+
+
+    </script>
